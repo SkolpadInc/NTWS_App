@@ -7,6 +7,10 @@ import lang from 'element-ui/lib/locale/lang/en'
 import locale from 'element-ui/lib/locale'
 import App from './App.vue'
 
+// Custom
+import './plugins'
+import store from './state/store'
+
 // Plugins
 import GlobalComponents from './gloablComponents'
 import GlobalDirectives from './globalDirectives'
@@ -41,5 +45,6 @@ const router = new VueRouter({
 new Vue({
   el: '#app',
   render: h => h(App),
+  store,
   router
 })

@@ -8,7 +8,7 @@ import Stats from 'src/components/Dashboard/Views/Dashboard/Stats.vue'
 // Pages
 import User from 'src/components/Dashboard/Views/Pages/UserProfile.vue'
 import TimeLine from 'src/components/Dashboard/Views/Pages/TimeLinePage.vue'
-import Login from 'src/components/Dashboard/Views/Pages/Login.vue'
+// import Login from 'src/components/Dashboard/Views/Pages/Login.vue'
 import Register from 'src/components/Dashboard/Views/Pages/Register.vue'
 import Lock from 'src/components/Dashboard/Views/Pages/Lock.vue'
 
@@ -40,6 +40,14 @@ import VectorMaps from 'src/components/Dashboard/Views/Maps/VectorMapsPage.vue'
 import Calendar from 'src/components/Dashboard/Views/Calendar/CalendarRoute.vue'
 // Charts
 import Charts from 'src/components/Dashboard/Views/Charts.vue'
+
+// State management
+import store from '../state/store'
+
+import AuthLayout from '../components/Auth/Layout/AuthLayout.vue'
+
+import Login from 'src/components/Auth/Views/Login.vue'
+
 
 let componentsMenu = {
   path: '/components',
@@ -195,6 +203,32 @@ let lockPage = {
 
 const routes = [
   {
+    path: '/login',
+    redirect: '/auth/login'
+  },
+  {
+    path: '/auth',
+    component: AuthLayout,
+    redirect: '/auth/login',
+    children: [
+      {
+        path: 'login',
+        name: 'login',
+        component: Login,
+        beforeEnter (routeTo, routeFrom, next) {
+          // If the user is already logged in
+          if (store.getters['auth/loggedIn']) {
+            // Redirect to the home page instead
+            next({ name: 'overview' })
+          } else {
+            // Continue to the login page
+            next()
+          }
+        }
+      }
+    ]
+  },
+  {
     path: '/',
     component: DashboardLayout,
     redirect: '/admin/overview',
@@ -223,6 +257,16 @@ const routes = [
     path: '/admin',
     component: DashboardLayout,
     redirect: '/admin/overview',
+    beforeEnter (routeTo, routeFrom, next) {
+      // If a guest user
+      if (!store.getters['auth/loggedIn']) {
+        // Redirect to the login page instead
+        next({ name: 'login' })
+      } else {
+        // Continue to the overview pages
+        next()
+      }
+    },
     children: [
       {
         path: 'overview',
