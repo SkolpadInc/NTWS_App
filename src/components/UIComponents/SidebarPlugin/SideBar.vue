@@ -4,14 +4,9 @@
        :data-active-color="activeColor">
     <div class="logo">
       <a class="simple-text logo-mini"
-         href="https://www.creative-tim.com/product/vue-paper-dashboard-pro">
-          <div class="logo-img">
-              <img :src="logo" alt="">
-          </div>
-      </a>
-      <a class="simple-text logo-normal"
-         href="https://www.creative-tim.com/vue-paper-dashboard-pro">
-          {{ title }}
+           <center>
+            <img src="static/images/ntws-logo.png" alt="NTWS Logo" width="144" height="144">
+          </center>
       </a>
     </div>
     <div class="sidebar-wrapper" ref="sidebarScrollArea">
@@ -52,7 +47,7 @@
       },
       backgroundColor: {
         type: String,
-        default: 'black',
+        default: 'white',
         validator: (value) => {
           let acceptedValues = ['white', 'brown', 'black']
           return acceptedValues.indexOf(value) !== -1
