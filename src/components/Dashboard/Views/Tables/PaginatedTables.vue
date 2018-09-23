@@ -1,11 +1,16 @@
 <template>
   <div class="row">
+      <div class="col-md-12">
+      <h4 class="title">Users Lists</h4>
+    </div>
     <div class="col-md-12 card">
-      <div class="card-header">
-        <div class="category">Users Lists</div>
+    <br>
+      <div class="col-lg-12">
+        <button type="submit" class="button pull-right">Add User</button>
       </div>
       <div class="card-content row">
         <div class="col-sm-6">
+        <br>
           <el-select
             class="select-default"
             v-model="pagination.perPage"
@@ -21,6 +26,7 @@
         </div>
         <div class="col-sm-6">
           <div class="pull-right">
+            <br>
             <label>
               <input type="search" class="form-control input-sm" placeholder="Search user" v-model="searchQuery" aria-controls="datatables">
             </label>
