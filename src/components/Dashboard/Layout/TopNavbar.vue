@@ -1,6 +1,11 @@
 <template>
   <nav class="navbar navbar-default">
     <div class="container-fluid">
+      <div class="navbar-minimize">
+        <button class="btn btn-fill btn-icon" @click="minimizeSidebar">
+          <i :class="$sidebar.isMinimized ? 'ti-menu-alt' : 'ti-more-alt'"></i>
+        </button>
+      </div>
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" :class="{toggled: $sidebar.showSidebar}" @click="toggleSidebar">
           <span class="sr-only">Toggle navigation</span>
