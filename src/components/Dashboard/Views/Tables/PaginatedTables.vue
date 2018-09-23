@@ -22,7 +22,7 @@
         <div class="col-sm-6">
           <div class="pull-right">
             <label>
-              <input type="search" class="form-control input-sm" placeholder="Search records" v-model="searchQuery" aria-controls="datatables">
+              <input type="search" class="form-control input-sm" placeholder="Search user" v-model="searchQuery" aria-controls="datatables">
             </label>
           </div>
         </div>
@@ -50,7 +50,7 @@
         </div>
         <div class="col-sm-6 pagination-info">
           <br>
-          <p class="category">Showing {{from + 1}} to {{to}} of {{total}} entries</p>
+          <p class="category">Showing {{from + 1}} to {{to}} of {{total}} users</p>
         </div>
         <div class="col-sm-6">
           <p-pagination class="pull-right"
