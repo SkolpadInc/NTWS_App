@@ -171,7 +171,7 @@
   }
   .navbar-nav{
     > li > a:not(.btn){
-      color: $dark-gray;
+      color: #7090B0;
     }
 
     > .active > a,
@@ -181,7 +181,7 @@
     > li > a:not(.btn):focus {
       background-color: transparent;
       border-radius: 3px;
-      color: $info-color;
+      color: #7090B0;
       @include opacity(1);
     }
 
