@@ -13,14 +13,10 @@
   </div>
 </template>
 <script>
-  import RegisterForm from './ValidationForms/RegisterForm.vue'
-  import LoginForm from './ValidationForms/LoginForm.vue'
   import TypeValidationForm from './ValidationForms/TypeValidationForm.vue'
 
   export default {
     components: {
-      RegisterForm,
-      LoginForm,
       TypeValidationForm
     },
     data () {

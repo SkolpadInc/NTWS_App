@@ -1,72 +1,9 @@
 <template>
   <div class="row">
-    <div class="col-md-6">
-      <div class="card">
-        <form method="#" action="#">
-          <div class="card-header">
-            <h4 class="card-title">
-              Stacked Form
-            </h4>
-          </div>
-          <div class="card-content">
-            <div class="form-group">
-              <label>Email address</label>
-              <input type="email" placeholder="Enter email" class="form-control">
-            </div>
-            <div class="form-group">
-              <label>Password</label>
-              <input type="password" placeholder="Password" class="form-control">
-            </div>
-            <p-checkbox>Subscribe to newsletter</p-checkbox>
-
-            <button type="submit" class="btn btn-fill btn-info">Submit</button>
-          </div>
-        </form>
-      </div> <!-- end card -->
-    </div> <!--  end col-md-6  -->
-    <div class="col-md-6">
-      <div class="card">
-        <form class="form-horizontal">
-          <div class="card-header">
-            <h4 class="card-title">
-              Horizontal Form
-            </h4>
-          </div>
-          <div class="card-content">
-            <div class="form-group">
-              <label class="col-md-3 control-label">Email</label>
-              <div class="col-md-9">
-                <input type="email" placeholder="Email" class="form-control">
-              </div>
-            </div>
-            <div class="form-group">
-              <label class="col-md-3 control-label">Password</label>
-              <div class="col-md-9">
-                <input type="password" placeholder="Password" class="form-control">
-              </div>
-            </div>
-            <div class="form-group">
-              <label class="col-md-3"></label>
-              <p-checkbox class="col-md-9">Remember me</p-checkbox>
-            </div>
-          </div>
-          <div class="card-footer">
-            <div class="form-group">
-              <label class="col-md-3"></label>
-              <div class="col-md-9">
-                <button type="submit" class="btn btn-fill btn-info">
-                  Sign in
-                </button>
-              </div>
-            </div>
-          </div>
-        </form>
-      </div> <!-- end card -->
-    </div> <!--  end col-md-6  -->
     <div class="col-md-12">
       <div class="card">
         <div class="card-header">
-          <h4 class="card-title">Form Elements</h4>
+          <h4 class="card-title">User Information</h4>
         </div>
         <div class="card-content">
           <form method="get" action="/" class="form-horizontal">

@@ -1,13 +1,13 @@
 <template>
-  <div class="row">
+    <div class="row">
       <div class="col-md-12">
       <h4 class="title" style="color:#2F2F2F">Users Lists</h4>
-    </div>
-    <div class="col-md-12 card">
-    <br>
       <div class="col-lg-12">
-        <button type="submit" class="button pull-right">Add User</button>
+        <button type="submit" class="button pull-right" @click="openNewUser">Add User</button>
       </div>
+    </div>
+    <br>
+    <div class="col-md-12 card">
       <div class="card-content row">
         <div class="col-sm-6">
         <br>
@@ -168,6 +168,9 @@
         if (indexToDelete >= 0) {
           this.tableData.splice(indexToDelete, 1)
         }
+      },
+      openNewUser () {
+        this.$router.push({ name: 'New User' })
       }
     }
   }

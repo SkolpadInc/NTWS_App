@@ -3,44 +3,85 @@
     <form class="form-horizontal">
       <div class="card-header">
         <h4 class="card-title">
-          Register Form
+          User Information
         </h4>
       </div>
       <div class="card-content">
         <fieldset>
           <div class="form-group">
-            <label class="col-sm-2 control-label">Required text</label>
+            <label class="col-sm-2 control-label">Full Name</label>
             <div class="col-sm-6">
               <input type="text"
-                     name="requiredText"
-                     v-validate="modelValidations.requiredText"
-                     v-model="model.requiredText"
+                     name="name"
+                     v-validate="modelValidations.name"
+                     v-model="model.name"
                      class="form-control">
-              <small class="text-danger" v-show="requiredText.invalid">
-                {{ getError('requiredText') }}
+              <small class="text-danger" v-show="name.invalid">
+                {{ getError('name') }}
               </small>
-            </div>
-            <div class="col-sm-4">
-              <code>required:true</code>
             </div>
           </div>
         </fieldset>
 
         <fieldset>
           <div class="form-group">
-            <label class="col-sm-2 control-label">Email</label>
+            <label class="col-sm-2 control-label">Username</label>
             <div class="col-sm-6">
-              <input type="email"
-                     name="email"
-                     v-validate="modelValidations.email"
-                     v-model="model.email"
+              <input type="text"
+                     name="username"
+                     v-validate="modelValidations.username"
+                     v-model="model.username"
                      class="form-control">
-              <small class="text-danger" v-show="email.invalid">
-                {{ getError('email') }}
+              <small class="text-danger" v-show="username.invalid">
+                {{ getError('username') }}
               </small>
             </div>
-            <div class="col-sm-4">
-              <code>email:true</code>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <div class="form-group column-sizing">
+            <label class="col-sm-2 control-label">
+              Password
+            </label>
+            <div class="col-sm-3">
+              <input class="form-control"
+                     name="password"
+                     placeholder="password"
+                     v-validate="modelValidations.password"
+                     v-model="model.password"
+                     type="text">
+              <small class="text-danger" v-show="password.invalid">
+                {{ getError('password') }}
+              </small>
+
+            </div>
+            <div class="col-sm-3">
+              <input class="form-control"
+                     name="confirm_password"
+                     placeholder="confirm password"
+                     v-validate="modelValidations.confirm_password"
+                     v-model="model.confirm_password"
+                     type="text">
+              <small class="text-danger" v-show="confirm_password.invalid">
+                {{ getError('confirm_password') }}
+              </small>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <div class="form-group">
+            <label class="col-sm-2 control-label">Address</label>
+            <div class="col-sm-6">
+              <input type="text"
+                     name="address"
+                     v-validate="modelValidations.address"
+                     v-model="model.address"
+                     class="form-control">
+              <small class="text-danger" v-show="address.invalid">
+                {{ getError('address') }}
+              </small>
             </div>
           </div>
         </fieldset>
@@ -58,66 +99,23 @@
                 {{ getError('number') }}
               </small>
             </div>
-            <div class="col-sm-4">
-              <code>decimal:true</code>
-            </div>
           </div>
         </fieldset>
 
         <fieldset>
-          <div class="form-group">
-            <label class="col-sm-2 control-label">Url</label>
-            <div class="col-sm-6">
-              <input type="url"
-                     name="url"
-                     v-validate="modelValidations.url"
-                     v-model="model.url"
-                     class="form-control">
-              <small class="text-danger" v-show="url.invalid">
-                {{ getError('url') }}
-              </small>
-            </div>
-            <div class="col-sm-4">
-              <code>url:true</code>
-            </div>
-          </div>
-        </fieldset>
-        <fieldset>
-          <div class="form-group column-sizing">
-            <label class="col-sm-2 control-label">
-              Equal to
-            </label>
-            <div class="col-sm-3">
-              <input class="form-control"
-                     name="idSource"
-                     placeholder="#idSource"
-                     v-validate="modelValidations.idSource"
-                     v-model="model.idSource"
-                     type="text">
-              <small class="text-danger" v-show="idSource.invalid">
-                {{ getError('idSource') }}
-              </small>
-
-            </div>
-            <div class="col-sm-3">
-              <input class="form-control"
-                     name="idDestination"
-                     placeholder="#idDestination"
-                     v-validate="modelValidations.idDestination"
-                     v-model="model.idDestination"
-                     type="text">
-              <small class="text-danger" v-show="idDestination.invalid">
-                {{ getError('idDestination') }}
-              </small>
-            </div>
-            <div class="col-sm-4">
-              <code>confirmed : 'idSource'</code>
-            </div>
-          </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label">Type</label>
+                <div class="col-sm-10">
+                  <p-radio label="1" v-model="radios.radio1">Waterworks</p-radio>
+                  <p-radio label="2" v-model="radios.radio1">Accounting</p-radio>
+                  <p-radio label="3" v-model="radios.radio1">Treaasury</p-radio>
+                  <p-radio label="4" v-model="radios.radio1">Admin</p-radio>
+                </div>
+              </div>
         </fieldset>
       </div>
       <div class="card-footer text-center">
-        <button type="submit" @click.prevent="validate" class="btn btn-fill btn-info btn-wd">Validate inputs</button>
+        <button type="submit" @click.prevent="validate" class="button">Add User</button>
       </div>
     </form>
 
@@ -128,25 +126,33 @@
 
   export default {
     computed: {
-      ...mapFields(['requiredText', 'email', 'number', 'url', 'idSource', 'idDestination'])
+      ...mapFields(['name', 'username', 'address', 'number', 'url', 'password', 'confirm_password'])
     },
     data () {
       return {
+        radios: {
+          radio1: '1',
+          radio2: '2',
+          radio3: '2'
+        },
         model: {
-          requiredText: '',
-          email: '',
+          name: '',
+          username: '',
+          address: '',
           number: '',
           url: '',
-          idSource: '',
-          idDestination: ''
+          password: '',
+          confirm_password: ''
         },
         modelValidations: {
-          requiredText: {
+          name: {
             required: true
           },
-          email: {
-            required: true,
-            email: true
+          username: {
+            required: true
+          },
+          address: {
+            required: true
           },
           number: {
             required: true,
@@ -156,12 +162,12 @@
             required: true,
             url: true
           },
-          idSource: {
+          password: {
             required: true
           },
-          idDestination: {
+          confirm_password: {
             required: true,
-            confirmed: 'idSource'
+            confirmed: 'password'
           }
         }
       }
@@ -172,7 +178,7 @@
       },
       validate () {
         this.$validator.validateAll().then(isValid => {
-          this.$emit('on-submit', this.registerForm, isValid)
+          this.$router.push({ name: 'Users' })
         })
       }
     }

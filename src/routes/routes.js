@@ -99,7 +99,7 @@ let formsMenu = {
   children: [
     {
       path: 'regular',
-      name: 'Regular Forms',
+      name: 'Regular',
       component: RegularForms
     },
     {
@@ -109,7 +109,7 @@ let formsMenu = {
     },
     {
       path: 'validation',
-      name: 'Validation Forms',
+      name: 'New User',
       component: ValidationForms
     },
     {
