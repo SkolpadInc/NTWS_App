@@ -50,6 +50,7 @@
           </el-table>
         </div>
         <div class="col-sm-6 pagination-info">
+          <br>
           <p class="category">Showing {{from + 1}} to {{to}} of {{total}} entries</p>
         </div>
         <div class="col-sm-6">
