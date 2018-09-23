@@ -56,7 +56,7 @@ let componentsMenu = {
   children: [
     {
       path: 'buttons',
-      name: 'Buttons',
+      name: 'Bills',
       component: Buttons
     },
     {
@@ -104,7 +104,7 @@ let formsMenu = {
     },
     {
       path: 'extended',
-      name: 'Extended Forms',
+      name: 'Payments',
       component: ExtendedForms
     },
     {
@@ -137,7 +137,7 @@ let tablesMenu = {
     },
     {
       path: 'paginated',
-      name: 'Paginated Tables',
+      name: 'Users',
       component: PaginatedTables
     }]
 }
@@ -149,7 +149,7 @@ let mapsMenu = {
   children: [
     {
       path: 'google',
-      name: 'Google Maps',
+      name: 'Accounts',
       component: GoogleMaps
     },
     {
@@ -235,7 +235,7 @@ const routes = [
     children: [
       {
         path: 'calendar',
-        name: 'Calendar',
+        name: 'Logs',
         component: Calendar
       },
       {

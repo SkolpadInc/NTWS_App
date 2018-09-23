@@ -34,7 +34,8 @@
     font-weight: $font-weight-bold;
     margin: $navbar-margin-brand;
     padding: $navbar-padding-brand;
-    font-size: $font-size-large-navbar;
+    font-size: 24;
+    color: #0F5FAA;
   }
   .navbar-nav{
     > li > a {
