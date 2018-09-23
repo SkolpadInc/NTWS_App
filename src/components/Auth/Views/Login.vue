@@ -92,7 +92,7 @@ export default {
 
       if (this.loggedIn) {
         // Redirect to home
-        this.$router.push({ name: 'Overview' })
+        this.$router.push({ name: 'Users' })
       }
     }
   }
