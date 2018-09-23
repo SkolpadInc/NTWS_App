@@ -1,7 +1,7 @@
 <template>
   <div class="row">
       <div class="col-md-12">
-      <h4 class="title">Users Lists</h4>
+      <h4 class="title" style="color:#2F2F2F">Users Lists</h4>
     </div>
     <div class="col-md-12 card">
     <br>
