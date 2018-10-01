@@ -41,6 +41,8 @@ import Calendar from 'src/components/Dashboard/Views/Calendar/CalendarRoute.vue'
 // Charts
 import Charts from 'src/components/Dashboard/Views/Charts.vue'
 
+import Logs from 'src/components/Dashboard/Views/Tables/Logs.vue'
+
 // State management
 import store from '../state/store'
 
@@ -236,7 +238,7 @@ const routes = [
       {
         path: 'calendar',
         name: 'Logs',
-        component: Calendar
+        component: Logs
       },
       {
         path: 'charts',
