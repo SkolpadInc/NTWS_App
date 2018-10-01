@@ -28,7 +28,7 @@
           <div class="pull-right">
             <br>
             <label>
-              <input type="search" class="form-control input-sm" placeholder="Search user" v-model="searchQuery" aria-controls="datatables">
+              <input type="search" class="form-control input-sm" placeholder="Search logs" v-model="searchQuery" aria-controls="datatables">
             </label>
           </div>
         </div>
