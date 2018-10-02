@@ -44,6 +44,7 @@ import Charts from 'src/components/Dashboard/Views/Charts.vue'
 // New
 import Logs from 'src/components/Dashboard/Views/Tables/Logs.vue'
 import Bills from 'src/components/Dashboard/Views/Tables/Bills.vue'
+import Accounts from 'src/components/Dashboard/Views/Tables/Accounts.vue'
 
 // State management
 import store from '../state/store'
@@ -154,7 +155,7 @@ let mapsMenu = {
     {
       path: 'google',
       name: 'Accounts',
-      component: GoogleMaps
+      component: Accounts
     },
     {
       path: 'full-screen',
