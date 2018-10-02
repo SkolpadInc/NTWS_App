@@ -41,7 +41,9 @@ import Calendar from 'src/components/Dashboard/Views/Calendar/CalendarRoute.vue'
 // Charts
 import Charts from 'src/components/Dashboard/Views/Charts.vue'
 
+// New
 import Logs from 'src/components/Dashboard/Views/Tables/Logs.vue'
+import Bills from 'src/components/Dashboard/Views/Tables/Bills.vue'
 
 // State management
 import store from '../state/store'
@@ -59,7 +61,7 @@ let componentsMenu = {
     {
       path: 'buttons',
       name: 'Bills',
-      component: Buttons
+      component: Bills
     },
     {
       path: 'grid-system',
