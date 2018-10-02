@@ -47,7 +47,7 @@
         </div>
         <div class="col-sm-6 pagination-info">
           <br>
-          <p class="category">Showing {{from + 1}} to {{to}} of {{total}} users</p>
+          <p class="category">Showing {{from + 1}} to {{to}} of {{total}} logs</p>
         </div>
         <div class="col-sm-6">
           <p-pagination class="pull-right"
