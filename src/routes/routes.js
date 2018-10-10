@@ -45,6 +45,7 @@ import Charts from 'src/components/Dashboard/Views/Charts.vue'
 import Logs from 'src/components/Dashboard/Views/Tables/Logs.vue'
 import Bills from 'src/components/Dashboard/Views/Tables/Bills.vue'
 import Accounts from 'src/components/Dashboard/Views/Tables/Accounts.vue'
+import AddAccount from 'src/components/Dashboard/Views/Forms/AddAccount.vue'
 
 // State management
 import store from '../state/store'
@@ -116,6 +117,11 @@ let formsMenu = {
       path: 'validation',
       name: 'New User',
       component: ValidationForms
+    },
+    {
+      path: 'validation',
+      name: 'New Account',
+      component: AddAccount
     },
     {
       path: 'wizard',

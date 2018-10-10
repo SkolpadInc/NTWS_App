@@ -3,7 +3,7 @@
       <div class="col-md-12">
       <h4 class="title" style="color:#2F2F2F">Accounts Lists</h4>
       <div class="col-lg-12">
-        <button type="submit" class="button pull-right" @click="openNewUser">Add Account</button>
+        <button type="submit" class="button pull-right" @click="openNewAccount">Add Account</button>
       </div>
     </div>
     <br>
@@ -174,8 +174,8 @@
           this.tableData.splice(indexToDelete, 1)
         }
       },
-      openNewUser () {
-        this.$router.push({ name: 'New User' })
+      openNewAccount () {
+        this.$router.push({ name: 'New Account' })
       }
     }
   }
