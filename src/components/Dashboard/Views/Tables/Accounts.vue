@@ -141,6 +141,11 @@
         propsToSearch: ['name', 'email', 'age'],
         tableColumns: [
           {
+            prop: 'age',
+            label: 'Account No',
+            minWidth: 100
+          },
+          {
             prop: 'name',
             label: 'Name',
             minWidth: 200
