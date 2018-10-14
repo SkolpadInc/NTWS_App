@@ -5,6 +5,9 @@
       <div class="col-lg-12">
         <button type="submit" class="button pull-right" @click="openNewUser">Print Bills</button>
       </div>
+      <div class="col-lg-12">
+        <br>
+      </div>
     </div>
     <br>
     <div class="col-md-12 card">
