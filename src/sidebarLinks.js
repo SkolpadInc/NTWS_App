@@ -5,7 +5,7 @@ export default [
     path: '/table-list/paginated'
   },
   {
-    name: 'Bills',
+    name: 'Billing',
     icon: 'ti-package',
     path: '/components/buttons'
   },
