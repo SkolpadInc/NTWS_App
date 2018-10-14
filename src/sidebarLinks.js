@@ -15,7 +15,7 @@ export default [
     path: '/forms/extended'
   },
   {
-    name: 'Charts',
+    name: 'Reports',
     icon: 'ti-view-list-alt',
     path: '/charts'
   },
