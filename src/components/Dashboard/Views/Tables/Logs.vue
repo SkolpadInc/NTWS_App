@@ -120,9 +120,9 @@
     data () {
       return {
         pagination: {
-          perPage: 5,
+          perPage: 25,
           currentPage: 1,
-          perPageOptions: [5, 10, 25, 50],
+          perPageOptions: [25, 50, 100],
           total: 0
         },
         searchQuery: '',
