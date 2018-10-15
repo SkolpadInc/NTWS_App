@@ -115,7 +115,7 @@
         </fieldset>
       </div>
       <div class="card-footer text-center">
-        <button type="submit" @click.prevent="validate" class="button">Add User</button>
+        <button type="submit" @click.prevent="validate" class="button">Save User</button>
       </div>
     </form>
 

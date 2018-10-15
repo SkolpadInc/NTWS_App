@@ -119,7 +119,7 @@ let formsMenu = {
       component: ValidationForms
     },
     {
-      path: 'validation',
+      path: 'newAccount',
       name: 'New Account',
       component: AddAccount
     },

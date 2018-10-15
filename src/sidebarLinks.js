@@ -2,12 +2,30 @@ export default [
   {
     name: 'Users',
     icon: 'ti-panel',
-    path: '/table-list/paginated'
+    children: [{
+      name: 'Users List',
+      path: '/table-list/paginated'
+    },
+    {
+      name: 'Add User',
+      path: '/forms/validation'
+    }]
   },
   {
     name: 'Billing',
     icon: 'ti-package',
-    path: '/components/buttons'
+    children: [{
+      name: 'Encode Bills',
+      path: '/components/buttons'
+    },
+    {
+      name: 'Generate Bills',
+      path: '/components/grid-system'
+    },
+    {
+      name: 'Print Bills',
+      path: '/components/panels'
+    }]
   },
   {
     name: 'Payments',
@@ -22,7 +40,14 @@ export default [
   {
     name: 'Accounts',
     icon: 'ti-map',
-    path: '/maps/google'
+    children: [{
+      name: 'Accounts List',
+      path: '/maps/google'
+    },
+    {
+      name: 'Add Account',
+      path: '/forms/newAccount'
+    }]
   },
   {
     name: 'Logs',
