@@ -1,7 +1,7 @@
 export default [
   {
     name: 'Users',
-    icon: 'ti-panel',
+    icon: 'ti-user',
     children: [{
       name: 'Users List',
       path: '/table-list/paginated'
@@ -13,7 +13,7 @@ export default [
   },
   {
     name: 'Billing',
-    icon: 'ti-package',
+    icon: 'ti-receipt',
     children: [{
       name: 'Encode Bills',
       path: '/components/buttons'
@@ -29,17 +29,17 @@ export default [
   },
   {
     name: 'Payments',
-    icon: 'ti-clipboard',
+    icon: 'ti-money',
     path: '/forms/extended'
   },
   {
     name: 'Reports',
-    icon: 'ti-view-list-alt',
+    icon: 'ti-bar-chart',
     path: '/charts'
   },
   {
     name: 'Accounts',
-    icon: 'ti-map',
+    icon: 'ti-id-badge',
     children: [{
       name: 'Accounts List',
       path: '/maps/google'
@@ -51,7 +51,7 @@ export default [
   },
   {
     name: 'Logs',
-    icon: 'ti-gift',
+    icon: 'ti-list',
     path: '/calendar'
   }
 ]
