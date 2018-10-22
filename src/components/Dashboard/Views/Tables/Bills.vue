@@ -1,10 +1,7 @@
 <template>
     <div class="row">
       <div class="col-md-12">
-      <h4 class="title" style="color:#2F2F2F">Accounts Bills</h4>
-      <div class="col-lg-12">
-        <button type="submit" class="button pull-right" @click="openNewUser">Print Bills</button>
-      </div>
+      <h4 class="title" style="color:#2F2F2F">Encode Bills</h4>
       <div class="col-lg-12">
         <br>
       </div>
@@ -12,8 +9,52 @@
     <br>
     <div class="col-md-12 card">
       <div class="card-content row">
-        <div class="col-sm-6">
+        <div class="col-sm-12">
+          <div class="pull-right">
+            <br>
+            <label>
+              <input type="search" class="form-control input-sm" placeholder="Search user" v-model="searchQuery" aria-controls="datatables">
+            </label>
+          </div>
+        </div>
+        <div class="col-sm-10">
         <br>
+          <el-select
+            class="select-default"
+            v-model="date.perPage"
+            placeholder="Per page">
+            <el-option
+              class="select-default"
+              v-for="item in date.perPageOptions"
+              :key="item"
+              :label="item"
+              :value="item">
+            </el-option>
+          </el-select>
+          <el-select
+            class="select-default"
+            v-model="barangay.perPage"
+            placeholder="Per page">
+            <el-option
+              class="select-default"
+              v-for="item in barangay.perPageOptions"
+              :key="item"
+              :label="item"
+              :value="item">
+            </el-option>
+          </el-select>
+          <el-select
+            class="select-default"
+            v-model="cluster.perPage"
+            placeholder="Per page">
+            <el-option
+              class="select-default"
+              v-for="item in cluster.perPageOptions"
+              :key="item"
+              :label="item"
+              :value="item">
+            </el-option>
+          </el-select>
           <el-select
             class="select-default"
             v-model="pagination.perPage"
@@ -26,14 +67,8 @@
               :value="item">
             </el-option>
           </el-select>
-        </div>
-        <div class="col-sm-6">
-          <div class="pull-right">
-            <br>
-            <label>
-              <input type="search" class="form-control input-sm" placeholder="Search user" v-model="searchQuery" aria-controls="datatables">
-            </label>
-          </div>
+          <br>
+          <br>
         </div>
         <div class="col-sm-12">
           <el-table class="table-striped"
@@ -47,16 +82,31 @@
                              :label="column.label">
             </el-table-column>
             <el-table-column
+              :min-width="200"
+              fixed="right"
+              label="Meter Reading">
+              <template slot-scope="props">
+                <div class="col-sm-10">
+              <input type="text"
+                     name="name"
+                     class="form-control">
+            </div>
+              </template>
+            </el-table-column>
+            <el-table-column
               :min-width="120"
               fixed="right"
               label="Actions">
               <template slot-scope="props">
-                <a class="btn btn-simple btn-xs btn-warning btn-icon edit" @click="handleEdit(props.$index, props.row)"><i class="ti-pencil-alt"></i></a>
-                <a class="btn btn-simple btn-xs btn-danger btn-icon remove"  @click="handleDelete(props.$index, props.row)"><i class="ti-close"></i></a>
+                <a class="btn btn-simple btn-xs btn-warning btn-icon edit" @click="handleEdit(props.$index, props.row)"><i class="ti-save"></i></a>
               </template>
             </el-table-column>
           </el-table>
         </div>
+        <div class="col-lg-12">
+        <br>
+        <button type="submit" class="button pull-right" @click="openNewUser">Save</button>
+      </div>
         <div class="col-sm-6 pagination-info">
           <br>
           <p class="category">Showing {{from + 1}} to {{to}} of {{total}} users</p>
@@ -137,18 +187,41 @@
           perPageOptions: [5, 10, 25, 50],
           total: 0
         },
+        barangay: {
+          perPage: 'San Pablo',
+          currentPage: 1,
+          perPageOptions: ['San Pablo', 'Del Rosario', 'Marga', 'Cawilan', 'Poblacion', 'Motorpool (1,2,3)', 'Motorpool (pingaping 4,5,6)'],
+          total: 0
+        },
+        cluster: {
+          perPage: 12,
+          currentPage: 1,
+          perPageOptions: [12, 39, 46, 53, 72, 75],
+          total: 0
+        },
+        date: {
+          perPage: 'Jan 2019',
+          currentPage: 1,
+          perPageOptions: ['Jan 2019', 'Feb 2019', 'Mar 2019', 'Apr 2019', 'May 2019', 'Jun 2019'],
+          total: 0
+        },
         searchQuery: '',
         propsToSearch: ['name', 'email', 'age'],
         tableColumns: [
           {
             prop: 'name',
-            label: 'Name',
+            label: 'Barangay',
             minWidth: 200
           },
           {
             prop: 'email',
             label: 'Cluster',
             minWidth: 250
+          },
+          {
+            prop: 'name',
+            label: 'Name',
+            minWidth: 200
           }
         ],
         tableData: users
@@ -159,7 +232,7 @@
         alert(`Your want to like ${row.name}`)
       },
       handleEdit (index, row) {
-        alert(`Your want to edit ${row.name}`)
+        alert(`Your want to save ${row.name}`)
       },
       handleDelete (index, row) {
         let indexToDelete = this.tableData.findIndex((tableRow) => tableRow.id === row.id)
@@ -168,7 +241,7 @@
         }
       },
       openNewUser () {
-        this.$router.push({ name: 'New User' })
+        alert(`Save completed`)
       }
     }
   }

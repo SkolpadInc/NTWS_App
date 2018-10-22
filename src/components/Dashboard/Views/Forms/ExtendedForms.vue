@@ -136,6 +136,7 @@
       },
       validate () {
         this.$validator.validateAll().then(isValid => {
+          alert(`Payment saved`)
         })
       }
     }
