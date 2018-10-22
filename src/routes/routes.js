@@ -67,7 +67,7 @@ let componentsMenu = {
     },
     {
       path: 'grid-system',
-      name: 'Grid System',
+      name: 'Generate Bills',
       component: GridSystem
     },
     {

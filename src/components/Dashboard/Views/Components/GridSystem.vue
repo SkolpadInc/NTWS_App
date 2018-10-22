@@ -1,253 +1,157 @@
 <template>
-  <div class="row">
-    <div class="container-fluid">
-      <h4 class="title">XS Grid
-        <small>Always Horizontal</small>
-      </h4>
-      <div class="row">
-        <div class="col-xs-4">
-          <div class="card">
-            <div class="card-content text-center">
-              <code>col-xs-4</code>
-            </div>
-          </div>
-        </div>
-        <div class="col-xs-4">
-          <div class="card">
-            <div class="card-content text-center">
-              <code>col-xs-4</code>
-            </div>
-          </div>
-        </div>
-        <div class="col-xs-4">
-          <div class="card">
-            <div class="card-content text-center">
-              <code>col-xs-4</code>
-            </div>
-          </div>
-        </div>
+  <div class="card">
+    <form class="form-horizontal">
+      <div class="card-header">
+        <h4 class="card-title">
+          Generate Bills
+        </h4>
       </div>
-
-      <h4 class="title">SM Grid
-        <small>Collapsed at 768px</small>
-      </h4>
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="card">
-            <div class="card-content text-center">
-              <code>col-sm-4</code>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="card">
-            <div class="card-content text-center">
-              <code>col-sm-4</code>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="card">
-            <div class="card-content text-center">
-              <code>col-sm-4</code>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <h4 class="title">MD Grid
-        <small>Collapsed at 992px</small>
-      </h4>
-      <div class="row">
-        <div class="col-md-4">
-          <div class="card">
-            <div class="card-content text-center">
-              <code>col-md-4</code>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card">
-            <div class="card-content text-center">
-              <code>col-md-4</code>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card">
-            <div class="card-content text-center">
-              <code>col-md-4</code>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <h4 class="title">LG Grid
-        <small>Collapsed at 1200px</small>
-      </h4>
-      <div class="row">
-        <div class="col-lg-4">
-          <div class="card">
-            <div class="card-content text-center">
-              <code>col-lg-4</code>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="card">
-            <div class="card-content text-center">
-              <code>col-lg-4</code>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="card">
-            <div class="card-content text-center">
-              <code>col-lg-4</code>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <h4 class="title">Mixed Grid
-        <small>Showing different sizes on different screens</small>
-      </h4>
-      <div class="row">
-        <div class="col-sm-6 col-lg-3">
-          <div class="card">
-            <div class="card-content text-center">
-              <code>col-sm-6 col-lg-3</code>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-lg-3">
-          <div class="card">
-            <div class="card-content text-center">
-              <code>col-sm-6 col-lg-3</code>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-lg-3">
-          <div class="card">
-            <div class="card-content text-center">
-              <code>col-sm-6 col-lg-3</code>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-lg-3">
-          <div class="card">
-            <div class="card-content text-center">
-              <code>col-sm-6 col-lg-3</code>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <h4 class="title">Offset Grid
-        <small>Adding some space when needed</small>
-      </h4>
-      <div class="row">
-        <div class="col-md-3">
-          <div class="card">
-            <div class="card-content text-center">
-              <code>col-md-3</code>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 col-md-offset-6">
-          <div class="card">
-            <div class="card-content text-center">
-              <code>col-md-3 col-md-offset-6</code>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4 col-md-offset-1">
-          <div class="card">
-            <div class="card-content text-center">
-              <code>col-md-4 col-md-offset-1</code>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-md-offset-2">
-          <div class="card">
-            <div class="card-content text-center">
-              <code>col-md-4 col-md-offset-2</code>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-md-offset-3">
-          <div class="card">
-            <div class="card-content text-center">
-              <code>col-md-6 col-md-offset-3</code>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <h4 class="title">Paragraphs</h4>
-      <div class="card">
-        <div class="card-content">
-          <div class="row">
+      <div class="card-content">
+        <fieldset>
+          <div class="form-group">
+            <label class="col-sm-2 control-label">Date</label>
             <div class="col-sm-6">
-              <h3>Some Title Here</h3>
-              <p>
-                One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to me?" he thought.</p>
+            <el-select
+            class="select-default"
+            v-model="date.perPage"
+            placeholder="Per page">
+            <el-option
+              class="select-default"
+              v-for="item in date.perPageOptions"
+              :key="item"
+              :label="item"
+              :value="item">
+            </el-option>
+          </el-select>
             </div>
-
+          </div>
+        </fieldset>
+        <fieldset>
+          <div class="form-group">
+            <label class="col-sm-2 control-label">Barangay</label>
             <div class="col-sm-6">
-              <h3>Another Title Here</h3>
-              <p>
-                One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to me?" he thought.</p>
+            <el-select
+            class="select-default"
+            v-model="barangay.perPage"
+            placeholder="Per page">
+            <el-option
+              class="select-default"
+              v-for="item in barangay.perPageOptions"
+              :key="item"
+              :label="item"
+              :value="item">
+            </el-option>
+          </el-select>
             </div>
           </div>
-
-          <br>
-
-          <div class="row">
-            <div class="col-sm-4">
-              <h3>Some Title Here</h3>
-              <p>
-                One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment.</p>
-            </div>
-
-            <div class="col-sm-4">
-              <h3>Another Title Here</h3>
-              <p>
-                One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment.</p>
-            </div>
-
-            <div class="col-sm-4">
-              <h3>Another Title Here</h3>
-              <p>
-                One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment.</p>
+        </fieldset>
+        <fieldset>
+          <div class="form-group">
+            <label class="col-sm-2 control-label">Cluster</label>
+            <div class="col-sm-6">
+            <el-select
+            class="select-default"
+            v-model="cluster.perPage"
+            placeholder="Per page">
+            <el-option
+              class="select-default"
+              v-for="item in cluster.perPageOptions"
+              :key="item"
+              :label="item"
+              :value="item">
+            </el-option>
+          </el-select>
             </div>
           </div>
+        </fieldset>
+      </div>
+      <div class="card-footer text-center">
+        <button type="submit" @click.prevent="validate" class="button">Generate Bills</button>
+      </div>
+    </form>
 
-          <br>
-
-          <div class="row">
-            <div class="col-sm-4">
-              <h3>Some Title Here</h3>
-              <p>
-                One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment.</p>
-            </div>
-
-            <div class="col-sm-8">
-              <h3>Another Title Here</h3>
-              <p>
-                One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment. One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment.</p>
-            </div>
-          </div>
-        </div>
-      </div> <!--  end card -->
-    </div>
   </div>
 </template>
 <script>
-  export default {}
+  import {mapFields} from 'vee-validate'
+
+  export default {
+    computed: {
+      ...mapFields(['name', 'username', 'address', 'number', 'url', 'password', 'confirm_password'])
+    },
+    data () {
+      return {
+        radios: {
+          radio1: '1',
+          radio2: '2',
+          radio3: '2'
+        },
+        barangay: {
+          perPage: 'San Pablo',
+          currentPage: 1,
+          perPageOptions: ['San Pablo', 'Del Rosario', 'Marga', 'Cawilan', 'Poblacion', 'Motorpool (1,2,3)', 'Motorpool (pingaping 4,5,6)'],
+          total: 0
+        },
+        cluster: {
+          perPage: 12,
+          currentPage: 1,
+          perPageOptions: [12, 39, 46, 53, 72, 75],
+          total: 0
+        },
+        date: {
+          perPage: 'Jan 2019',
+          currentPage: 1,
+          perPageOptions: ['Jan 2019', 'Feb 2019', 'Mar 2019', 'Apr 2019', 'May 2019', 'Jun 2019'],
+          total: 0
+        },
+        model: {
+          name: '',
+          username: '',
+          address: '',
+          number: '',
+          url: '',
+          password: '',
+          confirm_password: ''
+        },
+        modelValidations: {
+          name: {
+            required: true
+          },
+          username: {
+            required: true
+          },
+          address: {
+            required: true
+          },
+          number: {
+            required: true,
+            decimal: true
+          },
+          url: {
+            required: true,
+            url: true
+          },
+          password: {
+            required: true
+          },
+          confirm_password: {
+            required: true,
+            confirmed: 'password'
+          }
+        }
+      }
+    },
+    methods: {
+      getError (fieldName) {
+        return this.errors.first(fieldName)
+      },
+      validate () {
+        this.$validator.validateAll().then(isValid => {
+          alert(`Bills Generated`)
+        })
+      }
+    }
+  }
 </script>
 <style>
-
 </style>
