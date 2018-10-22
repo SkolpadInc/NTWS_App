@@ -72,7 +72,7 @@ let componentsMenu = {
     },
     {
       path: 'panels',
-      name: 'Panels',
+      name: 'Print Bulls',
       component: Panels
     },
     {
