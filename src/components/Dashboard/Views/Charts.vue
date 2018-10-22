@@ -3,45 +3,21 @@
     <div class="col-md-6">
       <div class="card">
         <div class="card-header">
-          <h4 class="card-title">24 Hours Performance</h4>
-          <p class="category">Line Chart</p>
-        </div>
-        <div class="card-content">
-          <div id="chartPerformance" class="ct-chart"></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-6">
-      <div class="card">
-        <div class="card-header">
-          <h4 class="card-title">NASDAQ: AAPL</h4>
-          <p class="category">Line Chart with Points</p>
-        </div>
-        <div class="card-content">
-          <div id="chartStock" class="ct-chart"></div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-6">
-      <div class="card">
-        <div class="card-header">
-          <h4 class="card-title">Views</h4>
-          <p class="category">Bar Chart</p>
-        </div>
-        <div class="card-content">
-          <div id="chartViews" class="ct-chart"></div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-6">
-      <div class="card">
-        <div class="card-header">
-          <h4 class="card-title">Activity</h4>
-          <p class="category">Multiple Bars Chart</p>
+          <h4 class="card-title">Payment Collection</h4>
+          <p class="category">Expected vs Actual</p>
         </div>
         <div class="card-content">
           <div id="chartActivity" class="ct-chart"></div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title">Water Consumption</h4>
+        </div>
+        <div class="card-content">
+          <div id="chartStock" class="ct-chart"></div>
         </div>
       </div>
     </div>
